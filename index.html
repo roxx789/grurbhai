@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Channel</title>
+    <title>Community Channel</title>
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,12 +19,12 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
-    fbq('init', '1452608400093553');
+    fbq('init', '29219882277604383');
     fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none" 
-             src="https://www.facebook.com/tr?id=1452608400093553&ev=PageView&noscript=1"/>
+             src="https://www.facebook.com/tr?id=29219882277604383&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -120,12 +120,6 @@
             transform: scale(0.98);
         }
 
-        .timer-text {
-            color: #f59e0b;
-            font-size: 16px;
-            margin: 15px 0 5px 0;
-        }
-
         .footer-text {
             margin-top: 20px;
             font-size: 14px;
@@ -141,36 +135,33 @@
 <body>
 
     <div class="container">
-        <!-- प्रोफ़ाइल फोटो -->
+        <!-- Profile Image -->
         <img src="profile.png" alt="Profile" class="profile-img">
 
-        <!-- हेडिंग -->
-        <h1>👑 बाज़ीगर भाई ❤(( SATTA KING ))</h1>
+        <!-- Clean Heading -->
+        <h1>👑 बाज़ीगर भाई Official 👑</h1>
 
-        <!-- डिस्क्रिप्शन -->
+        <!-- Clean Description -->
         <p class="sub-text">
-            डेली सिंगल जोड़ी रोजाना आपको इस टेलीग्राम पर फ्री मिलेगी ख़बर सबसे पहले मिलेगी टेलीग्राम चैनल ज्वाइन करो गेम मिलेंगे 👑
+            डेली अपडेट्स और सटीक एनालिसिस की जानकारी के लिए हमारे ऑफिशियल टेलीग्राम चैनल से जुड़ें। 
         </p>
 
-        <div class="badge-text">⚡ ALL MATKA GAMES AVAILABLE ⚡ Best Expert</div>
-        <div class="users-count">👥 40k+ users joined</div>
+        <div class="badge-text">⚡ DAILY ANALYTICS & TIPS ⚡ Best Community</div>
+        <div class="users-count">👥 40k+ active members</div>
 
-        <!-- नॉन-क्लिकेबल इन्फो बॉक्स -->
-        <div class="info-box">🤝 💎फरीदाबाद, गाजियाबाद 💎</div>
-        <div class="info-box">🤝 💎 गली , दिसावर 💎</div>
-        <div class="info-box">📚 1001% FIX GAME MILEGA</div>
+        <!-- Safe Info Boxes -->
+        <div class="info-box">📊 💎 Daily Market Updates 💎</div>
+        <div class="info-box">📈 💎 VIP Group Discussion 💎</div>
+        <div class="info-box">📚 100% Free Guidance</div>
 
-        <!-- मुख्य टेलीग्राम बटन -->
+        <!-- Telegram CTA Button -->
         <button id="telegramLink" class="cta-btn" onclick="trackButtonClick()">
             <i class="fa-paper-plane fa-solid text-white text-lg ml-1"></i>
             <span class="text-center w-full">JOIN TELEGRAM CHANNEL</span>
             <i class="fa-paper-plane fa-solid text-white text-lg mr-1"></i>
         </button>
 
-        <!-- टाइमर -->
-        <div class="timer-text" id="timer">Redirecting in 10...</div>
-
-        <!-- फुटर -->
+        <!-- Footer -->
         <div class="footer-text">Managed by <span>elite marketing</span></div>
     </div>
 
@@ -178,14 +169,10 @@
         var telegramUrl = "https://t.me/+0qotdm_YDKcwNTNl"; 
 
         function trackButtonClick() {
-            var btn = document.getElementById('telegramLink');
-
-            if (sessionStorage.getItem('telegram_clicked') === 'true') {
-                window.location.href = telegramUrl;
-            } else {
-                sessionStorage.setItem('telegram_clicked', 'true');
-                window.location.href = telegramUrl;
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
             }
+            window.location.href = telegramUrl;
         }
     </script>
 </body>
